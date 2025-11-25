@@ -1,0 +1,33 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  width: 799px;
+  height: 785px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid black;
+}
+
+.square-div {
+  flex: 1 1 48px;
+  height: 49px;
+  border: 2px solid black;
+}
