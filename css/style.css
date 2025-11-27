@@ -11,17 +11,16 @@ html {
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100vw;
   height: 100vh;
 }
 
 .container {
+  margin: auto;
   width: 799px;
-  height: 785px;
+  height: auto;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   border: 2px solid black;
 }
@@ -30,4 +29,32 @@ body {
   flex: 1 1 48px;
   height: 49px;
   border: 2px solid black;
+}
+
+.btn-container {
+  width: 100vw;
+  height: auto;
+  margin: 20px;
+  padding: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  padding: 12px 24px;
+  background: rgb(44, 44, 224);
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 5px 0 rgb(0, 0, 0);
+  transition: transform 0.1s ease;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #d95353;
 }
