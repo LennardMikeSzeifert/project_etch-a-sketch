@@ -18,7 +18,7 @@ body {
 .container {
   margin: auto;
   width: 799px;
-  height: auto;
+  height: 788px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -54,7 +54,13 @@ body {
   font-weight: bolder;
 }
 
-btn:active {
+.btn:active {
   transform: translateY(4px);
   box-shadow: 0 1px 0 #d95353;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+  border: 5px solid black;
 }
