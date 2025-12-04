@@ -38,6 +38,16 @@ function changeGridLayout() {
   const userGridChoice = prompt(
     `Please enter a number smaller than 100 to define your desired grid layout`
   );
+
+  if (
+    !userGridChoice ||
+    isNaN(userGridChoice) ||
+    userGridChoice > 100 ||
+    userGridChoice < 1
+  ) {
+    alert("Please enter a valid number between 1 and 100.");
+    return;
+  }
   removeGrid();
 
   generateGrid(+userGridChoice);
