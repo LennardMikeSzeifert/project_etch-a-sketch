@@ -2,11 +2,13 @@ const container = document.querySelector(`.container`);
 const btn = document.querySelector(`.btn`);
 const GRID_WIDTH = 780;
 const GRID_HEIGHT = 788;
+let opacity = 0;
 
 function generateGrid(size) {
   const total = size * size;
   const flexBasis = GRID_WIDTH / size;
   const height = GRID_HEIGHT / size;
+  opacity = 0;
 
   for (let i = 0; i < total; i++) {
     const div = document.createElement("div");
@@ -18,12 +20,15 @@ function generateGrid(size) {
 }
 
 container.addEventListener("mouseover", (e) => {
-  const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
+  const randomColor = `rgba(${Math.floor(Math.random() * 256)}, ${Math.floor(
     Math.random() * 256
-  )}, ${Math.floor(Math.random() * 256)})`;
+  )}, ${Math.floor(Math.random() * 256)}, ${opacity})`;
 
   if (e.target.classList.contains("square-div")) {
     e.target.style.backgroundColor = randomColor;
+    if (opacity < 1) {
+      opacity += 0.1;
+    }
   }
 });
 
